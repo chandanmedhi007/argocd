@@ -9,7 +9,7 @@ pipeline {
     stage('Checkout') {
       steps {
         sh 'echo passed'
-        //git branch: 'main', url: 'https://github.com/chandanmedhi007/githubcm.git'
+        //git branch: 'main', url: 'https://github.com/chandanmedhi007/argocd.git'
       }
     }
     stage('Build and Test') {
@@ -47,7 +47,7 @@ pipeline {
     }
     stage('Update Deployment File') {
         environment {
-            GIT_REPO_NAME = "githubcm"
+            GIT_REPO_NAME = "argocd"
             GIT_USER_NAME = "chandanmedhi007"
         }
         steps {
